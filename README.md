@@ -22,7 +22,7 @@ pod 'lit-networking'
 
 ## Author
 
-edrimendy@gmail.com, medri@mycwt.com
+edrimendy@gmail.com
 
 ## License
 
