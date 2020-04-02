@@ -25,11 +25,11 @@ public final class HTTPClientAccessTokenDecorator: HTTPClientDecorator {
     
     private let authKey = "Authorization"
     
-    private var client: HTTPClient
+    let httpClient: HTTPClient
     private var tokenAdapter: AccessTokenAdapter
     
     public init(http client: HTTPClient, tokenAdapter: AccessTokenAdapter) {
-        self.client = client
+        self.httpClient = client
         self.tokenAdapter = tokenAdapter
     }
     
@@ -45,7 +45,7 @@ public final class HTTPClientAccessTokenDecorator: HTTPClientDecorator {
             case let .success(token):
                 #warning("TODO: save the requests in queue, in order to have multiple request support")
                 let decoratedHeaders = headers?.appendAuth(token: token)
-                self.client.get(from: url, method: method, headers: decoratedHeaders, body: body, completion: completion)
+                self.httpClient.get(from: url, method: method, headers: decoratedHeaders, body: body, completion: completion)
             }
         }
     }

@@ -10,7 +10,7 @@ import Foundation
 
 public class HTTPClientRetryDecorator: HTTPClientDecorator {
     
-    private let httpClient: HTTPClient
+    let httpClient: HTTPClient
     public var onRetry: (() -> Void)?
     
     public var retryable: Retryable?
