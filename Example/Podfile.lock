@@ -1,0 +1,16 @@
+PODS:
+  - lit-networking (0.1.0)
+
+DEPENDENCIES:
+  - lit-networking (from `../`)
+
+EXTERNAL SOURCES:
+  lit-networking:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  lit-networking: e7f9bb2a1c440dc9216b3cc8443d1cf438efcfac
+
+PODFILE CHECKSUM: ff56af0aff4536bd17c3218d1ba785a99fc15196
+
+COCOAPODS: 1.8.4

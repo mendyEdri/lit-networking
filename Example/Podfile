@@ -1,0 +1,6 @@
+use_frameworks!
+target 'lit-networking_Tests' do
+  pod 'lit-networking', :path => '../'
+  
+  
+end

@@ -1,0 +1,22 @@
+{
+  "name": "lit-networking",
+  "version": "0.1.0",
+  "summary": "A short description of lit-networking.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/mendu77@gmail.com/lit-networking",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "mendu77@gmail.com": "mendy.edri@carlsonwagonlit.com"
+  },
+  "source": {
+    "git": "https://github.com/mendu77@gmail.com/lit-networking.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "lit-networking/Classes/**/*"
+}
