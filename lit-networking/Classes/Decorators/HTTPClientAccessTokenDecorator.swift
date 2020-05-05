@@ -33,6 +33,10 @@ public final class HTTPClientAccessTokenDecorator: HTTPClientDecorator {
         self.tokenAdapter = tokenAdapter
     }
     
+    public func invalidateAllRequests() {
+        self.httpClient.invalidateAllRequests()
+    }
+    
     public func get(from url: URL, method: HTTPMethod, headers: [String : String]?, body: Data?, completion: @escaping (HTTPClient.Result) -> Void) {
         #warning("TODO: make it serial")
         tokenAdapter.requestAccessToken { [weak self] result in
