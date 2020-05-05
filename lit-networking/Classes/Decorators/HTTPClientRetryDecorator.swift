@@ -40,6 +40,10 @@ public class HTTPClientRetryDecorator: HTTPClientDecorator {
         }
     }
     
+    public func invalidateAllRequests() {
+        httpClient.invalidateAllRequests()
+    }
+    
     // Mark: Helpers
     
     private func handle(client result: HTTPClientRetryDecorator.Result) -> HTTPClientRetryDecorator.Result {

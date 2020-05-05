@@ -11,7 +11,7 @@ import Foundation
 /** Implementation of ChatHTTPClient, fires requsts with NSURLSession */
 
 public class URLSessionHTTPClient: HTTPClient {
-  
+    
     private let session: URLSession
     
     public init(session: URLSession = .shared) {
@@ -27,6 +27,10 @@ public class URLSessionHTTPClient: HTTPClient {
     
     public func get(with request: URLRequest, completion: @escaping (HTTPClient.Result) -> Void) {
         run(request: request, completion)
+    }
+    
+    public func invalidateAllRequests() {
+        self.session.invalidateAndCancel()
     }
     
     private func run(request: URLRequest, _ completion: @escaping (HTTPClient.Result) -> Void) {

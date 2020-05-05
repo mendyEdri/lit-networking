@@ -24,6 +24,9 @@ public protocol HTTPClient {
     
     /** Generic request from URL function */
     func get(with request: URLRequest, completion: @escaping (HTTPClient.Result) -> Void)
+    
+    /** Invalidate all requests in the queue */
+    func invalidateAllRequests()
 }
 
 /** Protocol methods overloading. Instead of requires every implementation to have 3 `get()` methods, it requires the basic, and the protocol with this extension exposed 2 more usefull methods. */

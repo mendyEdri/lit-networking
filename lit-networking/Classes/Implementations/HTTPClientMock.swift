@@ -9,7 +9,7 @@
 import Foundation
 
 public class HTTPClientMock: HTTPClient {
-    
+
     private var messages = [(url: URL, completion: (HTTPClient.Result) -> Void)]()
     
     public init() {}
@@ -22,6 +22,10 @@ public class HTTPClientMock: HTTPClient {
     
     public func get(with request: URLRequest, completion: @escaping (Result<(Data, HTTPURLResponse), Error>) -> Void) {
         messages.append((request.url!, completion))
+    }
+    
+    public func invalidateAllRequests() {
+        messages.removeAll()
     }
     
     // MARK: Helpers
